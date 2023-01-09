@@ -6,16 +6,20 @@ int xa = 30, ya = 1,
     xb = 1, yb = 20,
     xc = 60, yc = 20;
 
+string symbol = "o";
+
 Console.SetCursorPosition(xa, ya);
-Console.WriteLine("#");
+Console.WriteLine(symbol);
 
 Console.SetCursorPosition(xb, yb);
-Console.WriteLine("#");
+Console.WriteLine(symbol);
 
 Console.SetCursorPosition(xc, yc);
-Console.WriteLine("#");
+Console.WriteLine(symbol);
 
 ya += 1;
+yb += 1;
+yc += 1;
 
 int x = xa, y = xb;
 
@@ -44,7 +48,7 @@ while(i < count)
     }
 
     Console.SetCursorPosition(x, y);
-    Console.WriteLine("#");
+    Console.WriteLine(symbol);
 
     i++;
 }
