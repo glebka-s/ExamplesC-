@@ -1,4 +1,6 @@
-﻿void PrintArray(double[] array)
+﻿// расстояние между двумя точками в 3D
+
+void PrintArray(double[] array)
 {
     int len = array.Length;
     Console.Write(array[0]);
