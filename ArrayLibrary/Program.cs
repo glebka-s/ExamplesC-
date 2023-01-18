@@ -7,7 +7,7 @@
         int a;
         while (true)
         {   
-            if (int.TryParse(Console.ReadLine(), out a))
+            if (int.TryParse(Console.ReadLine() ?? "", out a))
                 break;
             Console.WriteLine("Ошибка ввода!");
         }
