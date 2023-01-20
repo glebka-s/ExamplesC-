@@ -17,16 +17,27 @@
     return(array);
 }
 
+int[] CreateRandomArray(int N)
+{
+    int[] array = new int[N];
+    for (int i = 0; i < N; i++)
+    {
+        array[i] = new Random().Next(100, 1000);
+    }
+    return(array);
+}
+
 void PrintArray(int[] array)
 {
     int len = array.Length;
-    Console.Write(array[0]);
+    Console.Write($"[{array[0]}");
     int i = 1;
     while (i < len)
     {
         Console.Write($", {array[i]}");
         i++;
     }
+    Console.Write("]");
 }
 
 void SelectionSortMinMax(int[] array)
