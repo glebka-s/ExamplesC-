@@ -80,6 +80,37 @@ void SelectionSortMaxMin(int[] array)
     }
 }
 
-int[] array = CreateIntArray(10);
+int[,] CreateMatrix(int n, int m)
+{   
+    int[,] result = new int[n ,m];
+    int a;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            while (true)
+            {   
+                if (int.TryParse(Console.ReadLine() ?? "", out a))
+                    break;
+                Console.WriteLine("Ошибка ввода!");
+            }
+            result[i, j] = a;
+        }
+    }
+    return result;
+}
 
-PrintArray(array);
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i,j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] matrix = CreateMatrix(4,4);
+PrintMatrix(matrix);
