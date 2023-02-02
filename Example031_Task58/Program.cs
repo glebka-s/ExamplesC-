@@ -82,8 +82,3 @@ else{
     Console.WriteLine("Произведение матриц:");
     PrintMatrix(matrix1Xmatrix2);
 }
-
-
-
-
-
